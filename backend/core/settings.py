@@ -42,6 +42,14 @@ INSTALLED_APPS = [
     'patients',
     'medical_history',
     'users',
+    'doctors',
+    'appointments',
+    'medical_records',
+    'prescriptions',
+    'medications',
+    'pharmacy',
+    'deliveries',
+
 ]
 
 MIDDLEWARE = [
