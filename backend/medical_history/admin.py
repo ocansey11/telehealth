@@ -87,7 +87,6 @@ class Allergy(models.Model):
         return self.name
 
 
-
 class FamilyMedicalHistory(models.Model):
     RELATIONSHIP_CHOICES = [
         ('Father', 'Father'),
