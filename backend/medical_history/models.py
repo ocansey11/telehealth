@@ -54,3 +54,26 @@ class MedicalHistory(models.Model):
 
     def __str__(self):
         return f"Medical History for {self.patient}"
+
+
+class Allergy(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    reaction = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+class ChronicCondition(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    description = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+class SurgicalHistory(models.Model):
+    procedure_name = models.CharField(max_length=255)
+    year = models.IntegerField(blank=True, null=True)
+    notes = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.procedure_name} ({self.year})"
